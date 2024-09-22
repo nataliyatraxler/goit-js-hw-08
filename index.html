@@ -4,16 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery with Modal</title>
-  <link rel="stylesheet" href="css/styles.css">
- 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.css">
+  <title>Галерея зображень</title>
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-  <ul class="gallery"></ul>
+  <ul class="gallery">
+    <!-- Галерея буде генеруватися з JavaScript -->
+  </ul>
 
-  <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5/dist/basicLightbox.min.js"></script>
+  <!-- Модалка для великого зображення -->
+  <div id="modal" class="modal" style="display: none;">
+    <span class="close">&times;</span>
+    <span class="prev">&lt;</span>
+    <img id="modal-image" src="" alt="" />
+    <span class="next">&gt;</span>
+  </div>
+
   <script src="./js/gallery.js"></script>
 </body>
 
