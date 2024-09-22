@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 156px;
+  max-width: calc(100% - 312px);
+  gap: 24px;
+}
+
+.gallery-item {
+  width: 360px;
+  height: 200px;
+
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  object-fit: cover;
+}
+
+.basicLightbox--visible .basicLightbox__placeholder img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal {
+  position: relative;
+  text-align: center;
+  width: 1112px;
+  height: 640px;
+  margin: 0 auto;
+}
+
+.modal button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 60px;
+  /* ширше для зручного кліку */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.modal button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal .prev {
+  left: -90px;
+
+}
+
+.modal .next {
+  right: -90px;
+ 
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
